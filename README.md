@@ -4,7 +4,7 @@ Better Nodejs error is a small nodejs package to render errors in a better way t
 ![MIT License](https://img.shields.io/github/license/netcode/better-errors.svg?style=flat-square)
 ![Issues](https://img.shields.io/github/issues/netcode/better-errors.svg?style=flat-square)
 
-![screenshot of better-errors](./Docs/screenshot.png)
+![screenshot of better-errors](https://raw.githubusercontent.com/netcode/better-errors/master/Docs/screenshot.png)
 
 ## Installation
 
