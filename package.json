@@ -7,12 +7,27 @@
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Eslam Salem <eslam@shieldfy.com>",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "eslint": "^7.11.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/netcode/better-errors.git"
+  },
+  "bugs": {
+    "url": "https://github.com/netcode/better-errors/issues"
+  },
+  "keywords": [
+    "better",
+    "errors",
+    "exception",
+    "debug",
+    "error-handling",
+    "stacktrace"
+  ]
 }
