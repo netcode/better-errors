@@ -40,6 +40,14 @@ try{
 }
 ```
 
+## Show stacktrace
+
+Stacktrace is hidden by default tro reduce confusion, if you want to show the stacktrace just add `--show-stack` argument to node starting command.
+
+```
+$ node index.js --show-stack
+```
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.

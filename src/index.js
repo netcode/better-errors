@@ -15,15 +15,13 @@ const config = {
 const getFile = function getFileContent({ file, line }) {
   let fileContent = fs.readFileSync(file, 'utf8');
   fileContent = fileContent.split('\n');
-
-  const currentLine = line - 1; // unify starting line to start from 0
-  const startLine = currentLine - 3;
-  const endLine = currentLine + 5;
-
+  const startLine = Number(line) - 3;
+  const endLine = Number(line) + 5;
   return fileContent.map((contentLine, i) => ({
-    number: i, // line number
+    // increase it by one because the array start at 0 and file start at 1
+    number: ++i, /* eslint-disable-line no-plusplus,no-param-reassign */
     content: contentLine, // line contents
-    current: i === currentLine, // current error line
+    current: i === Number(line), // current error line
   })).filter((lineObj) => lineObj.number >= startLine && lineObj.number <= endLine);
 };
 
@@ -84,8 +82,8 @@ const getStack = function getStackTrace(stack) {
  */
 const BetterError = function BetterError(err) {
   const stackTrace = getStack(err.stack);
-  let errTxt = '';
 
+  let errTxt = '';
   // render title
   errTxt += errorTemplate.renderError(err.constructor.name, err.message, stackTrace.appStack);
   if (stackTrace.appStack[0]) {
